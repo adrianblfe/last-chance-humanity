@@ -4,17 +4,22 @@
       <p id="typer"></p>
     </v-col>
     
-    <v-col v-if="showInitGameButton" cols="12" class="d-flex justify-center">
-      <v-button>Comenzar</v-button>
+    <v-col v-if="showInitGameButton" cols="12" sm="8" md="6" class="d-flex justify-end">
+      <!-- <nuxt-link to="/quiz">Comenzar</nuxt-link> -->
+      
     </v-col>
   </v-row>
 </template>
 
 <script>
 import typer from 'typer-js';
+import GLink from '@/components/genericLink.vue'
 
 export default {
   name: 'IndexPage',
+  component: {
+    GLink
+  },
   data() {
     return {
       showInitGameButton: false
@@ -35,7 +40,7 @@ export default {
         .end(() => {
           this.showInitGameButton = true
         });
-    }
+    },
   }
 }
 </script>
