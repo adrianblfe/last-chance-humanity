@@ -1,5 +1,5 @@
 <template>
-    <nuxt-link class="generic-link" :to="path">
+    <nuxt-link class="generic-link" :to="to">
         <slot />
     </nuxt-link>
 </template>
@@ -8,7 +8,7 @@
 export default {
     name: 'GLink',
     props: {
-        path: {
+        to: {
             type: String,
             required: true
         }
@@ -22,5 +22,7 @@ export default {
     border-radius: 0px;
     color: $font-color !important;
     text-transform: capitalize;
+    text-decoration: none;
+    padding: 5px;
 }
 </style>

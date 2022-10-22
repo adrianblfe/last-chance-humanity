@@ -1,24 +1,22 @@
 <template>
-  <v-row justify="center" align="center">
-    <v-col cols="12" sm="8" md="6">
+  <v-row>
+    <v-col cols="6" offset="3">
       <p id="typer"></p>
     </v-col>
     
-    <v-col v-if="showInitGameButton" cols="12" sm="8" md="6" class="d-flex justify-end">
-      <!-- <nuxt-link to="/quiz">Comenzar</nuxt-link> -->
-      
+    <v-col v-if="showInitGameButton" cols="6" offset="3" class="d-flex justify-end">
+      <GenericLink :to="'/quiz'">Comenzar</GenericLink>
     </v-col>
   </v-row>
 </template>
 
 <script>
 import typer from 'typer-js';
-import GLink from '@/components/genericLink.vue'
 
 export default {
   name: 'IndexPage',
   component: {
-    GLink
+    GenericLink: () => import('@/components/genericLink.vue')
   },
   data() {
     return {
@@ -31,7 +29,7 @@ export default {
   methods: { 
     typeIntroduction() {
       const element = document.querySelector('#typer');
-      typer(element, 90)
+      typer(element, 9) // Añadir 90 de velocidad
         .line('Hola humano, eres el último de tu especie')
         .line('está en tus manos la oportunidad')
         .line('de salvar a la humanidad, para ello,')

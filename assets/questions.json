@@ -1,0 +1,62 @@
+{
+    "quiz": [{
+        "question": "¿En que película de Marvel apareció por primera vez la gema de poder?",
+        "answer": "Guardianes de la Galaxia (2014)",
+        "type": "select",
+        "options": [
+            "Guardianes de la Galaxia (2014)",
+            "Ironman",
+            "Los vengadores: El primer vengador"
+        ]
+    }, {
+        "question": "¿Cuál es el nombre del actor que interpreta a Tony Stark/Ironman?",
+        "answer": "Robert Downey Jr.",
+        "type": "text",
+        "options": []
+    }, {
+        "question": "¿Cuál es la montaña más alta del continente americano?",
+        "answer": "Aconcagua",
+        "type": "radiobutton",
+        "options": [
+            "Aconcagua",
+            "Huascaran",
+            "Everest",
+            "K2"
+        ]
+    }, {
+        "question": "¿El tomate es una fruta o una verdura?",
+        "answer": "fruta",
+        "type": "text",
+        "options": []
+    }, {
+        "question": "¿Cuanto es 2^0?",
+        "answer": "1",
+        "type": "number",
+        "options": []
+    }, {
+        "question": "¿De que color es el sable de luz de Obi-Wan Kenobi?",
+        "answer": "azul",
+        "type": "select",
+        "options": [
+            "negro",
+            "verde",
+            "azul",
+            "rojo"
+        ]
+    }, {
+        "question": "¿Cuál es la debilidad de Superman?",
+        "answer": "kriptonita",
+        "type": "text",
+        "options": []
+    }, {
+        "question": "¿Cual de los siguientes movimientos tiene la Tierra?",
+        "answer": "Translación y rotación",
+        "type": "checkbox",
+        "options": [
+            "Rotación",
+            "Translación",
+            "Cinético",
+            "Centripeta"
+        ]
+    }]
+}
