@@ -54,8 +54,8 @@
         "type": "text",
         "options": []
     }, {
-        "question": "¿Cual de los siguientes movimientos tiene la Tierra?",
-        "answer": "Translación y rotación",
+        "question": "La Tierra, ¿qué movimientos tiene?",
+        "answer": ["Translación", "Rotación"],
         "type": "checkbox",
         "options": [
             "Rotación",
@@ -65,7 +65,7 @@
         ]
     }, {
         "question": "¿Cuál es el tercer planeta del Sistema Solar?",
-        "answer": "La Tierra",
+        "answer": "Tierra",
         "type": "text",
         "options": [] 
     }]
