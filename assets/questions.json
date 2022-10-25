@@ -9,6 +9,11 @@
             "Los vengadores: El primer vengador"
         ]
     }, {
+        "question": "¿Cuántas son las gemas del infinito?",
+        "answer": 6,
+        "type": "number",
+        "options": []
+    }, {
         "question": "¿Cuál es el nombre del actor que interpreta a Tony Stark/Ironman?",
         "answer": "Robert Downey Jr.",
         "type": "text",
@@ -24,7 +29,7 @@
             "K2"
         ]
     }, {
-        "question": "¿El tomate es una fruta o una verdura?",
+        "question": "¿El tomate, es una fruta o una verdura?",
         "answer": "fruta",
         "type": "text",
         "options": []
@@ -58,5 +63,10 @@
             "Cinético",
             "Centripeta"
         ]
+    }, {
+        "question": "¿Cuál es el tercer planeta del Sistema Solar?",
+        "answer": "La Tierra",
+        "type": "text",
+        "options": [] 
     }]
 }

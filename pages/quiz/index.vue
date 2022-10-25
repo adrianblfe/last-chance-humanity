@@ -4,49 +4,38 @@
             <div class="container-quiz">
                 <p id="question-quiz"></p>
                 <div class="answers-quiz">
-                    
+                    <QuizQuestion :quiz="question" @next-question="nextQuestion" />
                 </div>
             </div>
-        </v-col>
-        
-        <v-col cols="6" offset="3" class="d-flex justify-end">
-            <GenericButton @on-click="nextQuestion">Siguiente</GenericButton>
         </v-col>
     </v-row>
 </template>
 
 <script>
-import QUIZ from '@/assets/questions.json';
-
-function* getQuestionsGenerator(questions) {
-    for(const question in questions.quiz) {        
-        if (questions.quiz.length === question + 1) {
-            return questions.quiz[question];
-        } else {
-            yield questions.quiz[question];
-        }
-    }
-}
+import { mapGetters, mapActions } from 'vuex';
 
 export default {
     name: 'Quiz',
     component: {
-        GenericButton: () => import('@/components/genericButton.vue')
+        QuizQuestion: () => import('@/components/quizQuestion.vue'),
     },
     data() {
         return {
-            quiz: QUIZ,
-            generatorQuiz: null,
-            question: null,
+            question: {},
         };
     },
+    computed: {
+        ...mapGetters(['getQuestion']),
+    },
     mounted() {
-        this.generatorQuiz = getQuestionsGenerator(this.quiz);
+        this.nextQuestion();
     },
     methods: {
+        ...mapActions(['counterUp']),
         nextQuestion() {
-            this.question = this.generatorQuiz.next();
-        }
+            this.question = this.getQuestion;
+            this.counterUp();
+        },
     }
 }
 </script>
