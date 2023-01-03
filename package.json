@@ -39,7 +39,7 @@
     "eslint-plugin-nuxt": "^4.0.0",
     "eslint-plugin-vue": "^9.5.1",
     "husky": "^8.0.1",
-    "nightwatch": "^2.3.9",
+    "nightwatch": "^2.6.4",
     "prettier": "^2.7.1"
   }
 }
